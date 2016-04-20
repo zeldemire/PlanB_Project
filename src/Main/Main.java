@@ -1,27 +1,15 @@
 package Main;
 
-import java.awt.BorderLayout;
-import java.awt.CardLayout;
-import java.awt.Color;
-import java.awt.Dimension;
+import CourseData.Data;
+import GUI.*;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
-
-import javax.swing.BorderFactory;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-import CourseData.Data;
-import GUI.About;
-import GUI.Instructions;
-import GUI.Report;
-import GUI.SideBar;
-import GUI.TopBar;
 
 /**
  * <p>
@@ -213,7 +201,7 @@ public class Main extends JFrame {
 				}
 
 			}
-			// delete butotn selected, remove file and reset buttons
+			// delete button selected, remove file and reset buttons
 			if (e.getActionCommand().equalsIgnoreCase("deleteButton")) {
 
 				selectedFile = null;

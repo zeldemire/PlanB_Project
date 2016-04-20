@@ -1,13 +1,12 @@
 package CourseData;
 
+import Main.Constants;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-
-import CourseData.*;
-import Main.Constants;
 
 /**
  * The container class for the data structure that holds all class data
@@ -18,9 +17,9 @@ import Main.Constants;
 public class Data {
 
 	public ArrayList<Class> classList;
-	public ArrayList<Course> courseList;
-	public ArrayList<Subject> subjectList;
-	public ArrayList<Instructor> instructorList;
+	private ArrayList<Course> courseList;
+	private ArrayList<Subject> subjectList;
+	private ArrayList<Instructor> instructorList;
 	public ArrayList<Category> finalsCategories;
 
 	/**
@@ -62,8 +61,8 @@ public class Data {
 	/**
 	 * Processes a file and adds new entries to the data
 	 * 
-	 * @param dataFile
-	 * @return
+	 * @param dataFile Input file to read.
+	 * @return The status of the file reading process.
 	 */
 	public String readNewCourseData(File dataFile) {
 
@@ -110,7 +109,7 @@ public class Data {
 						.println("Warning: a line in the file had an invalid number of elements, skipped: "
 								+ line);
 				warningsTriggered = true;
-				continue readFile;
+				continue;
 
 			}
 
@@ -149,7 +148,7 @@ public class Data {
 						.println("Warning: Middletown/Hamilton campus class detected, skipped: "
 								+ line);
 				warningsTriggered = true;
-				continue readFile;
+				continue;
 
 			}
 
